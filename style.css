@@ -1,0 +1,162 @@
+:root {
+  --bg: #593637;
+  --panel: #f7f2ee;
+  --text: #221818;
+  --accent: #2c1f20;
+  --border: #1f1617;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  line-height: 1.7;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.site-shell {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 20;
+}
+
+.corner {
+  position: fixed;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding: 0.65rem 1rem;
+  border: 2px solid var(--border);
+  border-radius: 999px;
+  background: rgba(247, 242, 238, 0.96);
+  color: var(--text);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  pointer-events: auto;
+}
+
+.corner.current {
+  background: var(--accent);
+  color: #fff;
+}
+
+.corner-top-left {
+  top: 1rem;
+  left: 1rem;
+}
+
+.corner-right {
+  top: 50%;
+  right: 1rem;
+  transform: translateY(-50%);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  min-height: 9rem;
+  min-width: 3.25rem;
+}
+
+.corner-bottom-left {
+  left: 1rem;
+  bottom: 1rem;
+}
+
+.page {
+  width: min(960px, calc(100% - 7rem));
+  margin: 0 auto;
+  padding: 6rem 0 4rem;
+}
+
+.content-card {
+  background: var(--panel);
+  border: 2px solid var(--border);
+  border-radius: 2rem;
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 1.25rem;
+}
+
+.hero-card {
+  padding-top: 2rem;
+}
+
+.eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+}
+
+h1,
+h2 {
+  line-height: 1.25;
+  margin-top: 0;
+}
+
+h1 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 0.75rem;
+}
+
+h2 {
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+  margin-bottom: 0.75rem;
+}
+
+.lead {
+  font-size: 1.05rem;
+}
+
+p {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .page {
+    width: calc(100% - 2.5rem);
+    padding-top: 5.5rem;
+  }
+
+  .corner {
+    padding: 0.55rem 0.85rem;
+    font-size: 0.95rem;
+  }
+
+  .corner-top-left {
+    top: 0.75rem;
+    left: 0.75rem;
+  }
+
+  .corner-right {
+    right: 0.75rem;
+    min-height: 7.5rem;
+    min-width: 3rem;
+  }
+
+  .corner-bottom-left {
+    left: 0.75rem;
+    bottom: 0.75rem;
+  }
+
+  .content-card {
+    border-radius: 1.4rem;
+    padding: 1.15rem;
+  }
+}
