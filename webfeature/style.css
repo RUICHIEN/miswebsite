@@ -1,0 +1,335 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@900&family=Noto+Serif+Tamil:wght@900&family=Noto+Serif+Thai:wght@400;700&display=swap');
+
+:root{
+  --bg:#efefef;
+  --text:#272335;
+  --line:#bcbcbc;
+  --accent:#f08a3c;
+  --blue:#5d789c;
+  --dark:#0d0d0d;
+  --fixed-bg:rgba(255,255,255,0.94);
+  --fixed-border:#222;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:"Noto Serif TC", serif;
+}
+img{display:block;max-width:100%;}
+a{color:inherit;text-decoration:none;}
+
+.page{
+  max-width:1200px;
+  margin:0 auto;
+  padding:24px 28px 90px;
+}
+
+.fixed-btn{
+  position:fixed;
+  z-index:40;
+  background:var(--fixed-bg);
+  border:2px solid var(--fixed-border);
+  border-radius:999px;
+  box-shadow:0 1px 0 rgba(0,0,0,.08);
+  color:#222;
+}
+
+.about-btn{
+  top:20px;
+  left:20px;
+  padding:12px 18px;
+  font-size:18px;
+  font-weight:900;
+}
+
+.plan-btn{
+  top:50%;
+  right:18px;
+  transform:translateY(-50%);
+  writing-mode:vertical-rl;
+  text-orientation:mixed;
+  min-height:168px;
+  padding:18px 12px;
+  font-size:20px;
+  font-weight:900;
+  letter-spacing:.04em;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.home-btn{
+  left:20px;
+  bottom:20px;
+  padding:12px 18px;
+  font-size:18px;
+  font-weight:900;
+}
+
+.section-line{
+  border:none;
+  border-top:1px solid var(--line);
+  margin:48px 0;
+}
+
+/* ===== about ===== */
+.about-top-image{
+  background: transparent;
+}
+.about-top-image img{
+  width:min(760px, 76vw);
+  margin:0 auto;
+}
+
+.about-intro{
+  text-align:center;
+  padding:30px 16px 8px;
+}
+.about-intro h1{
+  margin:0 0 8px;
+  font-size:clamp(28px, 4vw, 46px);
+  line-height:1.2;
+  font-weight:900;
+}
+.about-intro p{
+  margin:0;
+  font-size:clamp(16px, 1.7vw, 22px);
+  line-height:1.9;
+}
+
+.about-grid{
+  display:grid;
+  grid-template-columns:110px minmax(0, 1fr);
+  gap:28px;
+  align-items:start;
+}
+
+.side-vertical{
+  writing-mode:vertical-rl;
+  text-orientation:mixed;
+  justify-self:center;
+  font-size:clamp(28px, 2.2vw, 40px);
+  font-weight:900;
+  line-height:1.15;
+  letter-spacing:.02em;
+}
+.side-vertical .accent{ color:var(--accent); }
+
+.about-content{
+  min-width:0;
+}
+.mix-title{
+  text-align:center;
+  font-size:clamp(30px, 3vw, 48px);
+  font-weight:900;
+  color:var(--blue);
+  margin:0 0 28px;
+}
+.mix-title .a-part,
+.mix-title .r-part{
+  font-family:"Noto Serif Tamil", serif;
+}
+.mix-title .x-part{
+  font-family:"Noto Serif Thai", serif;
+  margin:0 .2em;
+  font-weight:700;
+}
+
+.radar-wrap{
+  width:min(650px, 100%);
+  margin:0 auto 34px;
+}
+.radar-wrap img{
+  width:100%;
+  height:auto;
+}
+
+.about-list{
+  max-width:860px;
+  margin:0 auto;
+}
+.about-item{
+  margin:0 0 24px;
+  font-size:clamp(18px, 1.55vw, 24px);
+  line-height:1.9;
+}
+.about-item strong{
+  color:var(--accent);
+  font-weight:900;
+}
+.about-item .arrow{
+  display:block;
+  color:#333;
+}
+
+/* ===== plan ===== */
+.plan-hero{
+  position:relative;
+  min-height:420px;
+  overflow:hidden;
+  background-image:linear-gradient(rgba(0,0,0,.02), rgba(0,0,0,.02)), var(--hero-bg);
+  background-size:cover;
+  background-position:center;
+}
+.plan-hero-title{
+  position:absolute;
+  left:0;
+  top:0;
+  background:rgba(255,255,255,.92);
+  padding:10px 18px;
+  font-size:clamp(24px, 3.1vw, 42px);
+  font-weight:900;
+  line-height:1.2;
+}
+.plan-hero-card{
+  position:absolute;
+  left:38px;
+  top:92px;
+  width:min(500px, 44vw);
+  background:#fff;
+  box-shadow:0 10px 24px rgba(0,0,0,.14);
+}
+.plan-hero-card img{ width:100%; }
+
+.plan-grid{
+  display:grid;
+  grid-template-columns:118px minmax(0, 1fr);
+  gap:28px;
+  align-items:start;
+  margin-top:34px;
+}
+.section-block{
+  padding-bottom:34px;
+  margin-bottom:34px;
+  border-bottom:1px solid var(--line);
+}
+.section-block:last-child{
+  border-bottom:none;
+  padding-bottom:0;
+  margin-bottom:0;
+}
+
+.job-flex{
+  display:grid;
+  grid-template-columns:1.15fr .95fr;
+  gap:38px;
+}
+.job-subhead{
+  margin:0 0 12px;
+  font-size:clamp(18px, 1.5vw, 24px);
+  font-weight:900;
+}
+.job-list{
+  margin:0;
+  padding-left:1.2em;
+  font-size:clamp(16px, 1.3vw, 20px);
+  line-height:1.9;
+}
+.job-list li{ margin-bottom:6px; }
+
+.self-copy{
+  font-size:clamp(16px, 1.3vw, 20px);
+  line-height:2;
+  text-align:justify;
+}
+
+.plan-block{
+  display:grid;
+  grid-template-columns:120px minmax(0, 1fr);
+  gap:24px;
+  align-items:start;
+}
+.plan-side{
+  writing-mode:vertical-rl;
+  text-orientation:mixed;
+  justify-self:center;
+  font-weight:900;
+  font-size:clamp(24px, 1.85vw, 34px);
+  line-height:1.2;
+}
+.plan-copy{
+  min-width:0;
+}
+.plan-copy ul{
+  margin:0;
+  padding-left:1.2em;
+  font-size:clamp(16px, 1.3vw, 20px);
+  line-height:1.9;
+}
+.plan-copy li{ margin-bottom:6px; }
+
+.goal{
+  margin:18px 0 0;
+  font-size:clamp(16px, 1.3vw, 20px);
+  line-height:1.8;
+}
+.diamond{
+  display:inline-block;
+  width:10px;
+  height:10px;
+  transform:rotate(45deg);
+  margin-right:10px;
+  position:relative;
+  top:-1px;
+}
+.diamond.blue{ background:#5b8ec9; }
+.diamond.gold{ background:#d9a538; }
+
+@media (max-width: 980px){
+  .page{ padding:20px 22px 100px; }
+  .plan-hero{ min-height:310px; }
+  .plan-hero-card{ width:min(420px, 62vw); left:22px; top:78px; }
+  .about-grid,
+  .plan-grid{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+  .side-vertical,
+  .plan-side{
+    writing-mode:horizontal-tb;
+    justify-self:start;
+    font-size:28px;
+  }
+  .job-flex{
+    grid-template-columns:1fr;
+    gap:24px;
+  }
+  .plan-block{
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+}
+
+@media (max-width: 700px){
+  .about-btn,.home-btn{
+    font-size:16px;
+    padding:10px 14px;
+  }
+  .plan-btn{
+    right:10px;
+    min-height:120px;
+    font-size:18px;
+    padding:14px 10px;
+  }
+  .page{
+    padding:16px 16px 92px;
+  }
+  .about-top-image img{
+    width:100%;
+  }
+  .plan-hero{
+    min-height:220px;
+  }
+  .plan-hero-card{
+    left:14px;
+    top:58px;
+    width:min(320px, calc(100% - 28px));
+  }
+  .section-line{
+    margin:32px 0;
+  }
+}
