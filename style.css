@@ -78,8 +78,7 @@ a{color:inherit;text-decoration:none;}
 
 /* ===== about ===== */
 .about-top-image{
-  background:#000;
-  overflow:hidden;
+  background: transparent;
 }
 .about-top-image img{
   width:min(760px, 76vw);
